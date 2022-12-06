@@ -1,0 +1,46 @@
+﻿@page
+@model BLSystem.Pages.UnderviserPage.GetUnderviserModel
+@{
+    ViewData["Titel"] = "Get Underviser";
+}
+<form>
+    <p>
+        Søge <input type="text" asp-for="Navn" />
+        <input type="submit" value="Søge" />
+    </p>
+</form>
+
+<p>
+    <a asp-page="/UnderviserPage/CreateUnderviser">Opret en ny Underviser</a>
+</p>
+<h1> Liste over Underviser</h1>
+
+<table class=" table">
+    <thead>
+        <tr>
+            <th>Underviser_Id</th>
+            <th> Navn</th>
+            <th> Initialer</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.undervisers != null)
+        {
+            @foreach (var item in Model.undervisers)
+            {
+                <tr>
+                    <td>@item.Underviser_Id</td>
+                    <td>@item.Navn</td>
+                    <td>@item.Initialer</td>
+                   
+                    <td>
+                        <p>
+                            <a asp-page="/UnderviserPage/DeleteUnderviser" asp-route-id="@item.Underviser_Id">Slet underviser</a>
+                        </p>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

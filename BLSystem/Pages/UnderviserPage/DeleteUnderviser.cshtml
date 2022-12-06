@@ -1,0 +1,30 @@
+﻿@page "{id}"
+@model BLSystem.Pages.UnderviserPage.DeleteUnderviserModel
+@{
+    ViewData["Titel"] = "Delete Underviser";
+}
+
+<h1>Slet Underviser</h1>
+<h3>ER DU SIKKER ?</h3>
+<div>
+    <form method="post">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.underviser.Underviser_Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.underviser.Navn)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.underviser.Initialer)
+            </dt>
+           
+
+        </dl>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+    <div>
+        <a asp-page="GetUnderviser">Tilbage</a>
+    </div>
+</div>
+

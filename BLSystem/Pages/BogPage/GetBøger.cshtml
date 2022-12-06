@@ -1,0 +1,63 @@
+﻿@page
+@model BLSystem.Pages.BogPage.GetBøgerModel
+@{
+    ViewData["Titel"] = "GetBøger";
+}
+
+<form>
+    <p>
+        TITEL: <input type="text" asp-for="Title" />
+        FORFATTER: <input type="text" asp-for="Forfatter" />
+        ISBN <input type="text" asp-for="ISBN" />
+        
+        <input type="submit" value="Søge" />
+
+        
+    </p>
+</form>
+<p>
+    <a asp-page="/BogPage/CreateBog">Opret en ny Bog</a>
+</p>
+
+<h1> Liste over Bøger</h1>
+
+<table class=" table">
+    <thead>
+        <tr>
+            <th>Bog_id</th>
+            <th> Titel</th>
+            <th> Forfatter</th>
+            <th>udgivelsesår</th>
+            <th>ISBN</th>
+            <th>Billede</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Bøger != null)
+        {
+            @foreach (var item in Model.Bøger)
+            {
+                <tr>
+                    <td>@item.Bog_Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Forfatter</td>
+                    <td>@item.Udgivelsesår</td>
+                    <td>@item.ISBN</td>
+                    <td>
+                        <img src="~/Image/@item.Billede" width="80" height="70">
+                    </td>
+                    <td>
+                    <p>
+                    <a asp-page="/BogPage/DeleteBog" asp-route-id="@item.Bog_Id">Slet Bogen</a> |
+                     <a asp-page="/BogPage/UpdateBog" asp-route-id="@item.Bog_Id">Opdater Bog</a>
+                    </p>
+                    </td>
+                    
+                </tr>
+            }
+        }
+    </tbody>
+    <div>
+        <a asp-page="GetBøger">Tilbage</a>
+    </div>
+</table>

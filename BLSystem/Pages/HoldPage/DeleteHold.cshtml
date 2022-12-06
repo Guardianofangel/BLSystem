@@ -1,0 +1,26 @@
+﻿@page
+@model BLSystem.Pages.HoldPage.DeleteHoldModel
+@{
+    ViewData["Titel"] = "Delete Hold";
+
+}
+
+<h1>Slet Hold</h1>
+<h3>ER DU SIKKER ?</h3>
+<div>
+    <form method="post">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.hold.Hold_Id)
+            </dt>
+           
+
+
+        </dl>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+    <div>
+        <a asp-page="GetHold">Tilbage</a>
+    </div>
+</div>
+

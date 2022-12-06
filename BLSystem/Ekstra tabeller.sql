@@ -1,0 +1,3 @@
+﻿CREATE TABLE Semestre( Semestre_id int NOT NULL PRIMARY KEY, Navn VARCHAR (50) NOT NULL);
+CREATE TABLE Fag ( Fag_id int NOT NULL PRIMARY KEY, Fag_navn VARCHAR(50) NOT NULL);
+CREATE TABLE Uddannelse ( Uddannelse_id int NOT NULL PRIMARY KEY, Uddannelse_navn VARCHAR(50) NOT NULL);

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLSystem", "BLSystem\BLSystem.csproj", "{AE08DA70-EEDC-4D3F-AD92-2A225D308F7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE08DA70-EEDC-4D3F-AD92-2A225D308F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE08DA70-EEDC-4D3F-AD92-2A225D308F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE08DA70-EEDC-4D3F-AD92-2A225D308F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE08DA70-EEDC-4D3F-AD92-2A225D308F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF765496-F701-487A-BC48-9E1ED25B20E3}
+	EndGlobalSection
+EndGlobal

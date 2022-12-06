@@ -1,0 +1,56 @@
+﻿@page "{id}"
+@model BLSystem.Pages.BogPage.UpdateBogModel
+@{
+    ViewData["Titel"] = "Update Bog ";
+}
+<h1>Opdater</h1>
+<div class="row">
+    <div class=" col-md-4">
+        <form method="post">
+            <div asp-validation-summary=" ModelOnly" class=" text-danger">
+
+            </div>
+
+            <div class=" form-group">
+                <label asp-for="@Model.bog.Bog_Id" class=" control_label"></label>
+                <input asp-for="@Model.bog.Bog_Id" class="form-control" />
+                <span asp-validation-for="@Model.bog.Bog_Id" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.bog.Title" class=" control_label"></label>
+                <input asp-for="@Model.bog.Title" class="form-control" />
+                <span asp-validation-for="@Model.bog.Title" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.bog.Forfatter" class=" control_label"></label>
+                <input asp-for="@Model.bog.Forfatter" class="form-control" />
+                <span asp-validation-for="@Model.bog.Forfatter" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.bog.Udgivelsesår" class=" control_label"></label>
+                <input asp-for="@Model.bog.Udgivelsesår" class="form-control" />
+                <span asp-validation-for="@Model.bog.Udgivelsesår" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.bog.ISBN" class=" control_label"></label>
+                <input asp-for="@Model.bog.ISBN" class="form-control" />
+                <span asp-validation-for="@Model.bog.ISBN" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.bog.Billede" class=" control_label"></label>
+                <input asp-for="@Model.bog.Billede" class="form-control" />
+                <span asp-validation-for="@Model.bog.Billede" class=" text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Opdater" class="btn btn-primary" />
+            </div>
+
+        </form>
+        <div>
+            <a asp-page="GetBøger">Tilbage </a>
+        </div>
+    </div>
+</div>
+
+
+

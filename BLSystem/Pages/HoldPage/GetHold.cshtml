@@ -1,0 +1,40 @@
+﻿@page
+@model BLSystem.Pages.HoldPage.GetHoldModel
+@{
+    ViewData["Titel"] = "GetHold";
+
+    <p>
+        <a asp-page="/HoldPage/CreateHold">Opret en ny Hold</a>
+    </p>
+
+    <h1> Liste over Hold</h1>
+
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Hold_id</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Holds != null)
+            {
+                @foreach (var item in Model.Holds)
+                {
+                    <tr>
+                        <td>@item.Hold_Id</td>
+                        
+                        <td>
+                            <p>
+                                <a asp-page="/HoldPage/DeleteHold" asp-route-id="@item.Hold_Id">Slet Hold</a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+        <div>
+            <a asp-page="GetHold">Tilbage</a>
+        </div>
+    </table>
+}

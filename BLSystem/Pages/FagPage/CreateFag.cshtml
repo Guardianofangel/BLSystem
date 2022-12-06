@@ -1,0 +1,35 @@
+﻿@page
+@model BLSystem.Pages.FagPage.CreateFagModel
+@{
+    ViewData["Titel"] = "Opret Fag";
+}
+
+<h1>Create</h1>
+<div class="row">
+    <div class=" col-md-4">
+        <form method="post">
+            <div asp-validation-summary=" ModelOnly" class=" text-danger">
+
+            </div>
+
+            <div class=" form-group">
+                <label asp-for="@Model.fag.FagId" class=" control_label"></label>
+                <input asp-for="@Model.fag.FagId" class="form-control" />
+                <span asp-validation-for="@Model.fag.FagId" class=" text-danger"></span>
+            </div>
+            <div class=" form-group">
+                <label asp-for="@Model.fag.FagNavn"class=" control_label"></label>
+                <input asp-for="@Model.fag.FagNavn" class="form-control" />
+                <span asp-validation-for="@Model.fag.FagNavn" class=" text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Opret" class="btn btn-primary" />
+            </div>
+
+        </form>
+        <div>
+            <a asp-page="GetFag">Tilbage </a>
+        </div>
+    </div>
+</div>
+

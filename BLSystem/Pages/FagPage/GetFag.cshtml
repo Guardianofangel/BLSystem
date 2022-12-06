@@ -1,0 +1,41 @@
+﻿@page
+@model BLSystem.Pages.FagPage.GetFagModel
+@{
+     ViewData["Titel"] = "Get Fag";
+}
+
+<p>
+    <a asp-page="/FagPage/CreateFag">Opret et ny Fag</a>
+</p>
+<h1> Liste over Fag</h1>
+
+<table class=" table">
+    <thead>
+        <tr>
+            <th>FagId</th>
+            <th> FagNavn</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.fag != null)
+        {
+            @foreach (var item in Model.fag)
+            {
+                <tr>
+                    <td>@item.FagId</td>
+                    <td>@item.FagNavn</td>
+                   
+                    <td>
+                        <p>
+                         <a asp-page="/FagPage/DeleteFag" asp-route-id="@item.FagId">Slet Fag</a>
+                        </p>
+                        <p>
+                            <a asp-page="/FagPage/UpdateFag" asp-route-id="@item.FagId">Opdater Fag</a>
+                        </p>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
